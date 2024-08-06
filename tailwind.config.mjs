@@ -10,9 +10,6 @@ export default {
       fontFamily: {
         vazirmatn: ['Vazirmatn', 'sans-serif'],
       },
-      backgroundImage: {
-        logo: "url('GOVNRS-logo.svg')",
-      },
       backgroundSize: {
         logo: '116%',
       },
