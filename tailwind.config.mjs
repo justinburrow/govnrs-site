@@ -8,7 +8,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        vazirmatn: ['Vazirmatn', 'sans-serif'],
+        Benzin: ['Benzin', 'sans-serif'],
+        Ftra: ['Ftra'],
+        Archive: ['Archivo'],
+        monospace: ['monospace'],
       },
       backgroundSize: {
         logo: '116%',
@@ -16,7 +19,15 @@ export default {
       backgroundPosition: {
         logo: 'center 120%',
       },
+      colors: {
+        beige: '#F3F3F0',
+        olive: '#696c69',
+      },
+      maxWidth: {
+        mobileLayout: '600px',
+      },
     },
   },
+  darkMode: 'false',
   plugins: [daisyui],
 };

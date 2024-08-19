@@ -1,0 +1,163 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import MobileNav from '../components/MobileNav.astro'
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="GOVNRS music" />
+		<meta name="viewport" content="width=device-width" />
+    <!-- FAVICON -->
+		<link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/manifest.webmanifest" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap" rel="stylesheet">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+
+
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+    <ViewTransitions />
+	</head>
+
+	<body class="flex flex-col grow w-full min-h-screen bg-white p-2 md:p-10  font-Archivo">
+    <div class="bg-beige w-full h-full grow p-4 md:p-10 items-center flex flex-col">
+      <nav class="w-full flex max-w-mobileLayout mb-8 md:mb-16">
+        <ul class="list-none flex flex-row flex-wrap items-center place-content-between w-full uppercase font-Benzin text-olive text-xs md:text-md">
+          <li>
+            <a href="/" class="hover:underline">GOVNRS</a>
+          </li>
+          <li>
+            <a href="./music" class="hover:underline">Music</a>
+          </li>
+          <li>
+            <a href="./shows" class="hover:underline">Shows</a>
+          </li>
+          <li>
+            <a href="./merch" class="hover:underline">Merch</a>
+          </li>
+        </ul>
+      </nav>
+      <slot />
+
+      <footer class="my-8 md:my-16 w-full max-w-lg">
+        <div id="mc_embed_shell" class="w-full">
+          <div id="mc_embed_signup" class="w-full">
+            <form action="https://andersonsupply.us4.list-manage.com/subscribe/post?u=f94e5fe42e78f4f3b63403cca&amp;id=9cbe85ef1b&amp;f_id=007745e8f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+              <div id="mc_embed_signup_scroll">
+                <h3 class="uppercase text-xl font-bold text-olive font-Archivo text-center mb-4">Mailing List</h3>
+                <div class="mc-field-group">
+                  <div class="flex flex-row w-full border-1-olive">
+                    <input type="email" name="EMAIL" class="required email bg-transparent px-2 border-r-0 grow font-monospace border-0 text-xs tracking-wider uppercase" id="mce-EMAIL" required="" value="" placeholder="Email Address">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Sign Up" class="w-auto px-2 uppercase text-xs">
+                  </div>
+                </div>
+                <div hidden="">
+                  <input type="hidden" name="tags" value="7791452">
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display: none;"></div>
+                  <div class="response" id="mce-success-response" style="display: none;"></div>
+                </div>
+                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_f94e5fe42e78f4f3b63403cca_9cbe85ef1b" tabindex="-1" value="">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+          <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        </div>
+      </footer>
+    </div>
+
+    <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+	</body>
+</html>
+
+<style type="text/css">
+  #mc_embed_signup form {
+    padding: 0;
+    margin: 0;
+  }
+
+  #mc_embed_signup input {
+    padding: 0.6rem 1rem;
+  }
+
+  #mc_embed_signup input#mc-embedded-subscribe {
+    width: auto !important;
+    background: #696c69;
+    color: white;
+    padding: .3rem 1rem;
+    text-align: center;
+    line-height: 1;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline;
+    clear: none;
+    height: auto;
+    margin: 0 0 0 10px;
+    border: solid 2px transparent;
+  }
+
+  @font-face {
+      font-family: 'Benzin';
+      src: url('../fonts/Benzin-Medium.woff2') format('woff2'),
+          url('../fonts/Benzin-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Ftra';
+      src: url('../fonts/subset-FuturaNewLight-Obl.woff2') format('woff2'),
+          url('../fonts/subset-FuturaNewLight-Obl.woff') format('woff');
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Ftra';
+      src: url('../fonts/subset-FuturaNewBook-Reg.woff2') format('woff2'),
+          url('../fonts/subset-FuturaNewBook-Reg.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Ftra';
+      src: url('../fonts/subset-FuturaNewLight-Reg.woff2') format('woff2'),
+          url('../fonts/subset-FuturaNewLight-Reg.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Ftra';
+      src: url('../fonts/subset-FuturaNewBook-Obl.woff2') format('woff2'),
+          url('../fonts/subset-FuturaNewBook-Obl.woff') format('woff');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+  }
+</style>
