@@ -35,7 +35,34 @@ const { title } = Astro.props;
 
 	<body class="flex flex-col grow w-full min-h-screen bg-white p-2 md:p-10  font-Archivo">
     <div class="bg-beige w-full h-full grow p-4 md:p-10 items-center flex flex-col">
-      <nav class="w-full flex max-w-mobileLayout mb-8 md:mb-16">
+      <div class="social">
+        <ul class="flex gap-6 mb-8">
+          <li>
+            <a href="https://www.instagram.com/govnrsmusic/">
+            <svg class="w-8 h-8 text-gray-700 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@govnrs">
+            <svg class="w-8 h-8 text-gray-700 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+              <path fill="currentColor" d="M21,2H3A1,1,0,0,0,2,3V21a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V3A1,1,0,0,0,21,2Zm-3.281,8.725h0c-.109.011-.219.016-.328.017A3.571,3.571,0,0,1,14.4,9.129v5.493a4.061,4.061,0,1,1-4.06-4.06c.085,0,.167.008.251.013v2a2.067,2.067,0,1,0-.251,4.119A2.123,2.123,0,0,0,12.5,14.649l.02-9.331h1.914A3.564,3.564,0,0,0,17.719,8.5Z"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@GOVNRS">
+            <svg class="w-8 h-8 text-gray-700 dark:text-white fill-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+              <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                <path fill="currentColor" d="M 88.119 23.338 c -1.035 -3.872 -4.085 -6.922 -7.957 -7.957 C 73.144 13.5 45 13.5 45 13.5 s -28.144 0 -35.162 1.881 c -3.872 1.035 -6.922 4.085 -7.957 7.957 C 0 30.356 0 45 0 45 s 0 14.644 1.881 21.662 c 1.035 3.872 4.085 6.922 7.957 7.957 C 16.856 76.5 45 76.5 45 76.5 s 28.144 0 35.162 -1.881 c 3.872 -1.035 6.922 -4.085 7.957 -7.957 C 90 59.644 90 45 90 45 S 90 30.356 88.119 23.338 z M 36 58.5 v -27 L 59.382 45 L 36 58.5 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+              </g>
+              </svg>
+          </a>
+        </li>
+      </ul>
+      </div>
+      <nav class="w-full flex max-w-mobileLayout mb-8 md:mb-8">
         <ul class="list-none flex flex-row flex-wrap items-center place-content-between w-full uppercase font-Benzin text-olive text-xs md:text-med lg:text-lg">
           <li>
             <a href="/" class="hover:underline">GOVNRS</a>
@@ -93,6 +120,10 @@ const { title } = Astro.props;
 </html>
 
 <style type="text/css">
+@import "flowbite/src/themes/default";
+@source "../node_modules/flowbite";
+
+
   #mc_embed_signup form {
     padding: 0;
     margin: 0;
